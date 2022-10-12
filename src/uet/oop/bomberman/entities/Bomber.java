@@ -12,6 +12,8 @@ import javafx.scene.paint.Color;
 
 // testing hmu hmu
 
+//Ngay kia ra gui em nguoi bat tu
+
 public class Bomber extends Entity {
 
     public Bomber(int x, int y, Image img) {
