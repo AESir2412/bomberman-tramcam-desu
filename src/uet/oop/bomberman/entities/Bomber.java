@@ -12,6 +12,7 @@ import javafx.scene.paint.Color;
 
 // map feature 2 add
 
+//test 3
 
 public class Bomber extends Entity {
 
