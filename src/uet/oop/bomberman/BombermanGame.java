@@ -18,6 +18,10 @@ import uet.oop.bomberman.graphics.Sprite;
 import java.util.ArrayList;
 import java.util.List;
 
+import uet.oop.bomberman.control.Timer;
+import uet.oop.bomberman.gameMenu.GameMenu;
+import uet.oop.bomberman.graphics.Graphics;
+
 public class BombermanGame extends Application {
     
     public static final int WIDTH = 20;
@@ -28,7 +32,9 @@ public class BombermanGame extends Application {
     private List<Entity> entities = new ArrayList<>();
     private List<Entity> stillObjects = new ArrayList<>();
 
-
+    private Timer timer;
+    private static GameMenu menu;
+    private Graphics graphics;
     public static void main(String[] args) {
         Application.launch(BombermanGame.class);
     }
@@ -45,24 +51,22 @@ public class BombermanGame extends Application {
 
         // Tao scene
         Scene scene = new Scene(root);
+        timer = new Timer(this);
 
         // Them scene vao stage
         stage.setScene(scene);
         stage.show();
 
-        AnimationTimer timer = new AnimationTimer() {
-            @Override
-            public void handle(long l) {
-                render();
-                update();
-            }
-        };
-        timer.start();
-
+        //load map old
         createMap();
 
         Entity bomberman = new Bomber(1, 1, Sprite.player_right.getFxImage());
         entities.add(bomberman);
+    }
+
+    public void loop() {
+        update();
+        render();
     }
 
     public void createMap() {
@@ -81,12 +85,29 @@ public class BombermanGame extends Application {
     }
 
     public void update() {
-        entities.forEach(Entity::update);
+        switch (menu.getGameState()) {
+            case IN_MENU:
+            case IN_END_STATE:
+                menu.update();
+                break;
+            case END:
+                System.exit(0);
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid game state");
+        }
     }
 
     public void render() {
-        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
-        stillObjects.forEach(g -> g.render(gc));
-        entities.forEach(g -> g.render(gc));
+        switch (menu.getGameState()) {
+            case IN_MENU:
+            case IN_END_STATE:
+                graphics.renderMenu(menu);
+                break;
+            case END:
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid game state");
+        }
     }
 }
