@@ -116,7 +116,10 @@ public abstract class Enemy extends Component {
     }
 
     protected double getRandom() {
-        return Math.random() > 0.5 ? ENEMY_SPEED : -ENEMY_SPEED;
+        if (Math.random() > 0.5) {
+            return ENEMY_SPEED;
+        }
+        else return -ENEMY_SPEED;
     }
 
     protected void turn() {
