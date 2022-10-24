@@ -68,11 +68,13 @@ public class BBMMenuInGame extends FXGLMenu {
 
     private void enableSound() {
         isSoundEnabled = !isSoundEnabled;
-        getSettings().setGlobalMusicVolume(isSoundEnabled ? 0.4 : 0.0);
-        getSettings().setGlobalSoundVolume(isSoundEnabled ? 0.4 : 0.0);
         if (isSoundEnabled) {
+            getSettings().setGlobalMusicVolume(0.4);
+            getSettings().setGlobalSoundVolume(0.4);
             showMessage("Sound enabled!");
         } else {
+            getSettings().setGlobalMusicVolume(0);
+            getSettings().setGlobalSoundVolume(0);
             showMessage("Sound disabled!");
         }
     }

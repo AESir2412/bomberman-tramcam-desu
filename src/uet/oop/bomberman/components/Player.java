@@ -93,6 +93,7 @@ public class Player extends Component {
         animDie = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FRAMES, SIZE_FRAMES,
                 Duration.seconds(1.5), 12, 14);
 
+            // dang bthg, k bat tu
         if (animation == AnimationSkin.NORMAL) {
             animIdleDown = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FRAMES, SIZE_FRAMES,
                     Duration.seconds(ANIM_TIME_PLAYER), 3, 3);
@@ -111,7 +112,8 @@ public class Player extends Component {
                     Duration.seconds(ANIM_TIME_PLAYER), 0, 2);
             animWalkLeft = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FRAMES, SIZE_FRAMES,
                     Duration.seconds(ANIM_TIME_PLAYER), 9, 11);
-        } else {
+
+        } else { //Tuc dang bat tu
             animIdleDown = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FRAMES, SIZE_FRAMES,
                     Duration.seconds(ANIM_TIME_PLAYER), 115, 115);
             animIdleRight = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FRAMES, SIZE_FRAMES,

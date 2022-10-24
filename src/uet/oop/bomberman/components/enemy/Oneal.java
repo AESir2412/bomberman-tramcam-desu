@@ -33,11 +33,6 @@ public class Oneal extends Enemy {
         onCollisionBegin(BBMType.ONEAL_E, BBMType.BRICK,
                 (o, br) -> o.getComponent(Oneal.class).turn());
 
-        onCollisionBegin(BBMType.ONEAL_E, BBMType.GRASS,
-                (o, gr) -> o.getComponent(Oneal.class).turn());
-
-        onCollisionBegin(BBMType.ONEAL_E, BBMType.CORAL,
-                (o, gr) -> o.getComponent(Oneal.class).turn());
     }
 
     @Override
@@ -54,6 +49,7 @@ public class Oneal extends Enemy {
         }
     }
 
+    //Neu k detect duoc player, chay ham giong y het bthg luc di chuyen o enemy
     protected void moveNotAi(double tpf) {
         // fix bug move
         double x = entity.getX() - oldX;
@@ -75,6 +71,7 @@ public class Oneal extends Enemy {
         int x = player.call("getCellX");
         int y = player.call("getCellY");
 
+        //Di chuyen den vi tri x, y cua player
         astar.moveToCell(x, y);
     }
 

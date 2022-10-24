@@ -92,9 +92,14 @@ public class BBMApp extends GameApplication {
 
     @Override
     protected void onPreInit() {
-        getSettings().setGlobalMusicVolume(isSoundEnabled ? 0.4 : 0.0);
-        getSettings().setGlobalSoundVolume(isSoundEnabled ? 0.4 : 0.0);
-        loopBGM("MenuMusic.mp3");
+        if (isSoundEnabled) {
+            getSettings().setGlobalMusicVolume(0.05);
+            getSettings().setGlobalSoundVolume(0.4);
+        } else {
+            getSettings().setGlobalMusicVolume(0);
+            getSettings().setGlobalSoundVolume(0);
+        }
+        loopBGM("title_screen.mp3");
     }
 
     @Override
@@ -127,6 +132,7 @@ public class BBMApp extends GameApplication {
         }
     }
 
+    //Nhan input va chay o ham Player
     @Override
     protected void initInput() {
         FXGL.getInput().addAction(new UserAction("Move Up") {
@@ -185,18 +191,23 @@ public class BBMApp extends GameApplication {
         }, KeyCode.SPACE);
     }
 
+    //Check va cham
     @Override
     protected void initPhysics() {
         PhysicsWorld physics = getPhysicsWorld();
         physics.setGravity(0, 0);
 
+        //Check va cham voi Enemy
         onCollisionBegin(BBMType.PLAYER, BBMType.PORTAL, this::endLevel);
         onCollisionBegin(BBMType.PLAYER, BBMType.FLAME, (p, f) -> playerKilled());
         onCollisionBegin(BBMType.PLAYER, BBMType.BALLOOM_E, (p, b) -> playerKilled());
+        onCollisionBegin(BBMType.PLAYER, BBMType.GHOST_E, (p, b) -> playerKilled());
         onCollisionBegin(BBMType.PLAYER, BBMType.DAHL_E, (p, dh) -> playerKilled());
         onCollisionBegin(BBMType.PLAYER, BBMType.ONEAL_E, (p, o) -> playerKilled());
         onCollisionBegin(BBMType.PLAYER, BBMType.DORIA_E, (p, d) -> playerKilled());
         onCollisionBegin(BBMType.PLAYER, BBMType.OVAPE_E, (p, o) -> playerKilled());
+
+        //Cac va cham khac o components
     }
 
     //Check xem da hoan thien level chua
@@ -217,6 +228,7 @@ public class BBMApp extends GameApplication {
 
     //Khi player chet hoac het thoi gian
     private void playerKilled() {
+        //Neu dang bat tu thi khong chay ham nay
         if (!getb("immortality")) {
             set("immortality", true);
             play("BombermanDead.wav");

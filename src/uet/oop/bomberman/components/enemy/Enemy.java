@@ -37,7 +37,7 @@ public abstract class Enemy extends Component {
     protected AnimationChannel animWalkLeft;
     protected AnimationChannel animDie;
     protected AnimationChannel animStop;
-    protected int rangeDetectPlayer = 60;
+    protected int rangeDetectPlayer = 120;
 
     public Enemy() {
         setAnimationMove();
@@ -115,6 +115,7 @@ public abstract class Enemy extends Component {
         }
     }
 
+    //Cai nay chi Random hoac la enemy speed hoac la nguoc lai (di huong nguoc lai)
     protected double getRandom() {
         if (Math.random() > 0.5) {
             return ENEMY_SPEED;

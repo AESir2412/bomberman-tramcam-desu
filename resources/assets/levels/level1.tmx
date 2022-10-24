@@ -23,7 +23,7 @@
 </data>
  </layer>
  <objectgroup id="3" name="Items">
-  <object id="154" name="Item" type="speedItem" x="246" y="150" width="36" height="36"/>
+  <object id="154" name="Item" type="flamePassItem" x="246" y="150" width="36" height="36"/>
   <object id="156" name="Item" type="speedItem" x="486" y="534" width="36" height="36"/>
   <object id="157" name="Item" type="speedItem" x="918" y="438" width="36" height="36"/>
   <object id="158" name="Item" type="flameItem" x="1254" y="246" width="36" height="36"/>
@@ -471,7 +471,7 @@
   <object id="522" name="Enemy" type="oneal_e" x="432" y="240" width="48" height="48"/>
   <object id="523" name="Enemy" type="balloom_e" x="624" y="432" width="48" height="48"/>
   <object id="524" name="Enemy" type="ghost_e" x="816" y="624" width="48" height="48"/>
-  <object id="525" name="Enemy" type="ghost_e" x="816" y="336" width="48" height="48"/>
+  <object id="525" name="Enemy" type="dahl_e" x="816" y="336" width="48" height="48"/>
   <object id="527" name="Enemy" type="balloom_e" x="1296" y="528" width="48" height="48"/>
   <object id="600" name="Enemy" type="oneal_e" x="432" y="144" width="48" height="48"/>
  </objectgroup>
