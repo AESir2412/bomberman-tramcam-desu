@@ -9,6 +9,7 @@ import static uet.oop.bomberman.constants.Constants.SIZE_BLOCK;
 import static uet.oop.bomberman.constants.Constants.spriteSheetChosen;
 
 public class Balloom extends Enemy {
+
     public Balloom() {
         super();
         onCollisionBegin(BBMType.BALLOOM_E, BBMType.WALL,

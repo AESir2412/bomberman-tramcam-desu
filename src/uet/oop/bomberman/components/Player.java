@@ -25,7 +25,7 @@ public class Player extends Component {
     private double timeWalk = 1;
 
     public enum StatusDirection {
-        UP, RIGHT, DOWN, LEFT, STOP,DIE
+        UP, RIGHT, DOWN, LEFT, STOP, DIE
     }
 
     public enum AnimationSkin {

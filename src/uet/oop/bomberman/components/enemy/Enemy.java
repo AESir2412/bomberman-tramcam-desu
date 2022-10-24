@@ -62,6 +62,7 @@ public abstract class Enemy extends Component {
     }
 
 
+    //load sprite
     protected void setAnimationStage() {
         double dx = entity.getX() - lastX;
         double dy = entity.getY() - lastY;

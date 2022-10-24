@@ -53,7 +53,7 @@ public class Bomb extends Component {
 
         listFire.add(spawn("centerFlame", new SpawnData(entity.getX(), entity.getY())));
 
-        //haven't ate flame items
+        //Neu flame length chi la 1
         if (flameLength == 1) {
             listFire.add(spawn("rightEFlame"
                     , new SpawnData(entity.getX() + SIZE_BLOCK * flameLength, entity.getY())));
