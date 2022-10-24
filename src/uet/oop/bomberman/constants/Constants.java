@@ -1,7 +1,7 @@
 package uet.oop.bomberman.constants;
 
 /**
- * Game configuration, this is not recommended. But there is no time for refactoring.
+ * Global Constants.
  */
 public class Constants {
     public static final int WIDTH = 1080; //kich thuoc windows
