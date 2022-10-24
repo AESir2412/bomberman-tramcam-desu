@@ -29,7 +29,7 @@ public class Player extends Component {
     }
 
     public enum AnimationSkin {
-        NORMAL, FLAME_PASS
+        NORMAL, IMMORTAL
     }
 
     private StatusDirection currMove = StatusDirection.STOP;
@@ -41,6 +41,7 @@ public class Player extends Component {
     private AnimationChannel animWalkDown, animWalkRight, animWalkUp, animWalkLeft;
     private AnimationChannel animDie;
 
+    //Va cham voi cai power up
     public Player() {
         PhysicsWorld physics = getPhysicsWorld();
         physics.setGravity(0, 0);
@@ -49,10 +50,10 @@ public class Player extends Component {
             play("power_up.wav");
             speed_i.removeFromWorld();
             inc("score", SCORE_ITEM);
-            inc("speed", SPEED / 3);
+            inc("speed", 100);
             speed = geti("speed");
             getGameTimer().runOnceAfter(() -> {
-                inc("speed", -SPEED / 3);
+                inc("speed", -100);
                 speed = geti("speed");
                 setAnimation(AnimationSkin.NORMAL);
             }, Duration.seconds(8));
@@ -72,12 +73,12 @@ public class Player extends Component {
             inc("flame", 1);
         });
 
-        onCollisionBegin(BBMType.PLAYER, BBMType.FLAME_PASS_ITEM, (p, flame_pass_i) -> {
+        onCollisionBegin(BBMType.PLAYER, BBMType.IMMORTAL_ITEM, (p, immortal_i) -> {
             play("power_up.wav");
             set("immortality", true);
-            flame_pass_i.removeFromWorld();
+            immortal_i.removeFromWorld();
             inc("score", SCORE_ITEM);
-            setAnimation(AnimationSkin.FLAME_PASS);
+            setAnimation(AnimationSkin.IMMORTAL);
             getGameTimer().runOnceAfter(() -> {
                 setAnimation(AnimationSkin.NORMAL);
                 set("immortality", false);
@@ -113,7 +114,7 @@ public class Player extends Component {
             animWalkLeft = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FRAMES, SIZE_FRAMES,
                     Duration.seconds(ANIM_TIME_PLAYER), 9, 11);
 
-        } else { //Tuc dang bat tu
+        } else if (animation == AnimationSkin.IMMORTAL) { //Dang bat tu
             animIdleDown = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FRAMES, SIZE_FRAMES,
                     Duration.seconds(ANIM_TIME_PLAYER), 115, 115);
             animIdleRight = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FRAMES, SIZE_FRAMES,

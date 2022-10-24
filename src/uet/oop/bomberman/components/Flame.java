@@ -119,8 +119,8 @@ public class Flame extends Component {
     }
 
     private int getEnemies() {
-        return getGameWorld().getGroup(BBMType.ONEAL_E, BBMType.PASS_E, BBMType.BALLOOM_E,
-                BBMType.DAHL_E, BBMType.DORIA_E, BBMType.OVAPE_E).getSize();
+        return getGameWorld().getGroup(BBMType.ONEAL_E, BBMType.BALLOOM_E,
+                BBMType.DAHL_E, BBMType.GHOST_E).getSize();
     }
 
     private void setCollisionBreak(BBMType type, String nameTypeBreakAnim) {

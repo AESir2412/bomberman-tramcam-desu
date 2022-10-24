@@ -412,12 +412,12 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
-    @Spawns("flamePassItem")
-    public Entity newFlamePassItem(SpawnData data) {
+    @Spawns("immortalItem")
+    public Entity newImmortalItem(SpawnData data) {
         return FXGL.entityBuilder(data)
-                .type(BBMType.FLAME_PASS_ITEM)
+                .type(BBMType.IMMORTAL_ITEM)
                 .bbox(new HitBox(BoundingShape.box(data.<Integer>get("width"), data.<Integer>get("height"))))
-                .view("photo/powerup_flamepass.png")
+                .view("photo/powerup_immortal.png")
                 .with(new PhysicsComponent())
                 .with(new CollidableComponent(true))
                 .build();
