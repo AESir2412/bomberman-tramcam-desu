@@ -31,7 +31,7 @@ public abstract class Enemy extends Component {
 
     protected final AnimatedTexture texture;
     protected static final double ANIM_TIME = 0.5;
-    protected static final int SIZE_FLAME = 48;
+    protected static final int SIZE_FRAME = 48;
 
     protected AnimationChannel animWalkRight;
     protected AnimationChannel animWalkLeft;
@@ -61,6 +61,7 @@ public abstract class Enemy extends Component {
         setAnimationStage();
     }
 
+
     protected void setAnimationStage() {
         double dx = entity.getX() - lastX;
         double dy = entity.getY() - lastY;
@@ -68,6 +69,7 @@ public abstract class Enemy extends Component {
         lastX = entity.getX();
         lastY = entity.getY();
 
+        //Khi cham vao tuong (hai khoang cach giua cac frame 2 chieu = 0 )
         if (dx == 0 && dy == 0) {
             return;
         }
@@ -86,6 +88,7 @@ public abstract class Enemy extends Component {
             }
         }
     }
+
 
     private void setTurnEnemy(TurnDirection direct) {
         switch (direct) {
@@ -144,7 +147,7 @@ public abstract class Enemy extends Component {
         return false;
     }
 
-    protected void showScore(int score) {
+    protected void showScoreWhenEnemyDie(int score) {
         Label labelScore = new Label();
         labelScore.setText(score + "!");
         labelScore.setFont(Font.font("Comic Sans MS", FontWeight.EXTRA_BOLD, 15));
