@@ -37,7 +37,7 @@ public abstract class Enemy extends Component {
     protected AnimationChannel animWalkLeft;
     protected AnimationChannel animDie;
     protected AnimationChannel animStop;
-    protected int rangeDetectPlayer = 60;
+    protected int rangeDetectPlayer = 120;
 
     public Enemy() {
         setAnimationMove();

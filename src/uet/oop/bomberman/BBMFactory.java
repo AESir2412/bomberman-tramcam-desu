@@ -375,34 +375,7 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
-    @Spawns("coral")
-    public Entity newCoral(SpawnData data) {
-        return FXGL.entityBuilder(data)
-                .type(BBMType.CORAL)
-                .bbox(new HitBox(BoundingShape.box(data.<Integer>get("width"),
-                        data.<Integer>get("height"))))
-                .with(new Block(92, 92, TIME_PER_LEVEL))
-                .with(new PhysicsComponent())
-                .with(new CollidableComponent(true))
-                .build();
-    }
 
-    @Spawns("coral_break")
-    public Entity newCoralBreak(SpawnData data) {
-        var boundingShape = BoundingShape.box(
-                SIZE_BLOCK / 2.0f - 3,
-                SIZE_BLOCK / 2.0f - 3);
-
-        var hitBox = new HitBox(boundingShape);
-
-        return FXGL.entityBuilder(data)
-                .type(BBMType.CORAL_BREAK)
-                .bbox(hitBox)
-                .atAnchored(new Point2D(0, 0), new Point2D(data.getX(), data.getY()))
-                .with(new Block(93, 95, 1))
-                .zIndex(1)
-                .build();
-    }
 
     //ITEMS
 
