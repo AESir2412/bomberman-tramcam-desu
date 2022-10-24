@@ -358,29 +358,11 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
-    @Spawns("grass_break")
-    public Entity newGrassBreak(SpawnData data) {
-        var boundingShape = BoundingShape.box(
-                SIZE_BLOCK / 2.0f - 3,
-                SIZE_BLOCK / 2.0f - 3);
-
-        var hitBox = new HitBox(boundingShape);
-
-        return FXGL.entityBuilder(data)
-                .type(BBMType.GRASS_BREAK)
-                .bbox(hitBox)
-                .atAnchored(new Point2D(0, 0), new Point2D(data.getX(), data.getY()))
-                .with(new Block(89, 91, 1))
-                .zIndex(1)
-                .build();
-    }
-
-
 
     //ITEMS
 
     @Spawns("speedItem")
-    public Entity newItem3(SpawnData data) {
+    public Entity newSpeedItem(SpawnData data) {
         return entityBuilder(data)
                 .type(BBMType.SPEED_ITEM)
                 .view("photo/powerup_speed.png")

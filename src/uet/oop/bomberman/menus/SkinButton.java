@@ -9,11 +9,11 @@ import javafx.scene.text.Text;
 public class SkinButton extends Parent {
     Text text;
 
-    SkinButton(String name, Runnable action) {
+    public SkinButton(String name, Runnable action) {
         this(name, 30, action);
     }
 
-    SkinButton(String name, int size, Runnable action) {
+    public SkinButton(String name, int size, Runnable action) {
         text = FXGL.getUIFactoryService().newText(name, Color.WHITE, size);
         text.setStrokeWidth(1.5);
         text.strokeProperty().bind(text.fillProperty());

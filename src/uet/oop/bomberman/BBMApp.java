@@ -93,13 +93,13 @@ public class BBMApp extends GameApplication {
     @Override
     protected void onPreInit() {
         if (isSoundEnabled) {
-            getSettings().setGlobalMusicVolume(0.05);
+            getSettings().setGlobalMusicVolume(0.5);
             getSettings().setGlobalSoundVolume(0.4);
         } else {
             getSettings().setGlobalMusicVolume(0);
             getSettings().setGlobalSoundVolume(0);
         }
-        loopBGM("title_screen.mp3");
+        loopBGM("MenuMusic.mp3");
     }
 
     @Override
@@ -204,9 +204,6 @@ public class BBMApp extends GameApplication {
         onCollisionBegin(BBMType.PLAYER, BBMType.GHOST_E, (p, b) -> playerKilled());
         onCollisionBegin(BBMType.PLAYER, BBMType.DAHL_E, (p, dh) -> playerKilled());
         onCollisionBegin(BBMType.PLAYER, BBMType.ONEAL_E, (p, o) -> playerKilled());
-        onCollisionBegin(BBMType.PLAYER, BBMType.DORIA_E, (p, d) -> playerKilled());
-        onCollisionBegin(BBMType.PLAYER, BBMType.OVAPE_E, (p, o) -> playerKilled());
-
         //Cac va cham khac o components
     }
 

@@ -9,11 +9,11 @@ import javafx.scene.text.Text;
 public class MenuButton extends Parent {
     Text text;
 
-    MenuButton(String name, Runnable action) {
+    public MenuButton(String name, Runnable action) {
         this(name, 30, action);
     }
 
-    MenuButton(String name, int size, Runnable action) {
+    public MenuButton(String name, int size, Runnable action) {
         text = FXGL.getUIFactoryService().newText(name, Color.WHITE, size);
         text.setStrokeWidth(1.5);
         text.strokeProperty().bind(text.fillProperty());

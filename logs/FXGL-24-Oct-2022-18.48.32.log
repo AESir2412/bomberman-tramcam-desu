@@ -1,0 +1,89 @@
+18:48:29.221 [main                     ] DEBUG Logger               - Configured Logger
+18:48:29.222 [main                     ] DEBUG GameApplication      - Logging settings
+Title: Bomberman
+Version: Tram Cam Desu
+Width: 1080
+Height: 720
+Fullscreen: false
+Intro: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class uet.oop.bomberman.BBMApp$1
+
+18:48:29.494 [JavaFX Application Thread] DEBUG FXGLApplication      - Initializing FXGL
+18:48:29.497 [JavaFX Application Thread] INFO  Engine               - FXGL-11.17 (16.07.2021 15.46) on WINDOWS (J:18.0.2.1 FX:16)
+18:48:29.498 [JavaFX Application Thread] DEBUG Engine               - JRE Vendor Name: Oracle Corporation
+18:48:29.498 [JavaFX Application Thread] DEBUG Engine               - Running on OS: Windows 10 version 10.0
+18:48:29.498 [JavaFX Application Thread] DEBUG Engine               - Architecture: amd64
+18:48:29.498 [JavaFX Application Thread] INFO  Engine               - Source code and latest versions at: https://github.com/AlmasB/FXGL
+18:48:29.498 [JavaFX Application Thread] INFO  Engine               -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+18:48:29.567 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Creating a JavaFX scene
+18:48:29.602 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Target settings size: 1080.0 x 720.0
+18:48:29.602 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled scene size:    1080.0 x 720.0
+18:48:29.602 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled ratio: (1.0, 1.0)
+18:48:29.603 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Set initial scene to FXGLStartupScene
+18:48:29.608 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Opening main window
+18:48:29.670 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Window border size: (14.4000244140625, 37.5999755859375)
+18:48:29.670 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled size: 1080.0 x 720.0
+18:48:29.670 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled ratio: (1.0, 1.0)
+18:48:29.671 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scene size: 1080.0 x 720.0
+18:48:29.671 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Stage size: 1094.4000244140625 x 757.5999755859375
+18:48:29.677 [FXGL Background Thread 1 ] DEBUG Engine               - Initializing environment variables
+18:48:29.741 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - User app class for loading assets: class uet.oop.bomberman.BBMApp
+18:48:29.741 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Applying CSS: fxgl_dark.css
+18:48:29.742 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Legion%207/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/css/fxgl_dark.css
+18:48:29.782 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Initializing application scenes
+18:48:29.819 [FXGL Background Thread 1 ] DEBUG GameWorld            - Game world initialized
+18:48:29.865 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Physics world initialized: appHeight=720, physics.ppm=50.0
+18:48:29.867 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Using strategy: BRUTE_FORCE
+18:48:29.869 [FXGL Background Thread 1 ] DEBUG GameScene            - Game scene initialized: 1080x720
+18:48:29.956 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Application scenes initialized
+18:48:29.966 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Loading FXGL system data
+18:48:29.970 [FXGL Background Thread 1 ] DEBUG FileSystemAccess     - Reading from: D:\GitHub\bomberman-tramcam-desu\system\fxgl.bundle
+18:48:29.978 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Bundle FXGL: {}
+18:48:29.978 [FXGL Background Thread 1 ] DEBUG UpdaterService       - Checking for updates
+18:48:30.007 [FXGL Background Thread 4 ] DEBUG FXGLApplication      - Loading fonts
+18:48:30.007 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/GitHub/bomberman-tramcam-desu/target/classes/assets/ui/fonts/Retro%20Gaming.ttf
+18:48:30.007 [FXGL Background Thread 1 ] DEBUG FXGLApplication      - Loading default localization
+18:48:30.008 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Legion%207/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/languages/english.lang
+18:48:30.019 [FXGL Background Thread 1 ] INFO  FXGLApplication      - FXGL initialization took: 0.342 sec
+18:48:30.028 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Up - W
+18:48:30.028 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Down - S
+18:48:30.028 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Left - A
+18:48:30.029 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Right - D
+18:48:30.029 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Place Bomb - Space
+18:48:30.029 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/GitHub/bomberman-tramcam-desu/target/classes/assets/music/MenuMusic.mp3
+18:48:30.083 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Legion%207/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/fonts/Abel-Regular.ttf
+18:48:30.091 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Legion%207/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/fonts/lucida_console.ttf
+18:48:30.100 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Legion%207/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/fonts/Courier-Prime.ttf
+18:48:30.148 [JavaFX Application Thread] DEBUG AudioPlayer          - Playing music com.almasb.fxgl.audio.Music@1e38e798
+18:48:30.148 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Legion%207/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/textures/fxgl_icon.png
+18:48:30.164 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Legion%207/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/textures/fxgl_default_cursor.png
+18:48:30.165 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - CTRL+8
+18:48:30.166 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Options - 1
+18:48:30.166 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Console - 2
+18:48:30.166 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+18:48:30.167 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+18:48:30.168 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Toggle Debug Camera - CTRL+C
+18:48:30.170 [JavaFX Application Thread] DEBUG LoopRunner           - Starting loop
+18:48:30.179 [JavaFX Application Thread] DEBUG LoopRunner           - Initializing JavaFX AnimationTimerLoop
+18:48:30.181 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+18:48:30.189 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLStartupScene and adding to FXGLMainMenuDummyScene
+18:48:30.193 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLStartupScene -> FXGLMainMenuDummyScene
+18:48:30.193 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: BBMMenuStartingScreen
+18:48:30.193 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+18:48:30.196 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLMainMenuDummyScene and adding to BBMMenuStartingScreen
+18:48:30.197 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLMainMenuDummyScene -> BBMMenuStartingScreen
+18:48:30.213 [JavaFX Application Thread] DEBUG FXGLApplication      - Registering font factories with UI factory
+18:48:30.723 [FXGL Background Thread 2 ] INFO  UpdaterService       - Your current version:  11.17
+18:48:30.723 [FXGL Background Thread 2 ] INFO  UpdaterService       - Latest stable version: 17.2
+18:48:32.892 [JavaFX Application Thread] DEBUG FXGLApplication      - Exiting FXGL
+18:48:32.893 [JavaFX Application Thread] DEBUG LoopRunner           - Stopping loop
+18:48:32.893 [JavaFX Application Thread] DEBUG SystemBundleService  - Saving FXGL system data
+18:48:32.894 [JavaFX Application Thread] DEBUG FileSystemAccess     - Writing to: D:\GitHub\bomberman-tramcam-desu\system\fxgl.bundle
+18:48:32.895 [JavaFX Application Thread] DEBUG Async                - Shutting down background threads
+18:48:32.895 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Closing main window
+18:48:32.907 [JavaFX Application Thread] DEBUG Logger               - Closing Logger
