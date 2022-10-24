@@ -211,7 +211,7 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
-    @Spawns("dahl_e")
+    /*@Spawns("dahl_e")
     public Entity newDahl(SpawnData data) {
         return FXGL.entityBuilder(data)
                 .type(BBMType.DAHL_E)
@@ -233,7 +233,7 @@ public class BBMFactory implements EntityFactory {
                 .with(new CollidableComponent(true))
                 .zIndex(2)
                 .build();
-    }
+    }*/
 
     @Spawns("oneal_e")
     public Entity newOneal(SpawnData data) {
@@ -249,7 +249,7 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
-    @Spawns("doria_e")
+    /*@Spawns("doria_e")
     public Entity newDoria(SpawnData data) {
         return FXGL.entityBuilder(data)
                 .type(BBMType.DORIA_E)
@@ -261,7 +261,7 @@ public class BBMFactory implements EntityFactory {
                 .with(new Doria())
                 .zIndex(2)
                 .build();
-    }
+    }*/
 
     @Spawns("enemyDie")
     public Entity newEnemyDie(SpawnData data) {

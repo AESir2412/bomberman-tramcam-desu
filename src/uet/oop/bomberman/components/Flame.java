@@ -61,7 +61,7 @@ public class Flame extends Component {
             getGameTimer().runOnceAfter(entity::removeFromWorld, Duration.seconds(1.5));
         });
 
-        onCollisionBegin(BBMType.FLAME, BBMType.DORIA_E, (f, d) -> {
+        /*onCollisionBegin(BBMType.FLAME, BBMType.DORIA_E, (f, d) -> {
             double x = d.getX();
             double y = d.getY();
             d.getComponent(Doria.class).enemyDie();
@@ -96,7 +96,7 @@ public class Flame extends Component {
 
             Entity entity = spawn("enemyDie", new SpawnData(x, y));
             getGameTimer().runOnceAfter(entity::removeFromWorld, Duration.seconds(1.5));
-        });
+        });*/
 
         AnimationChannel animationFlame = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_BLOCK, SIZE_BLOCK,
                 Duration.seconds(0.4), startF, endF);
