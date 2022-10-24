@@ -115,6 +115,7 @@ public abstract class Enemy extends Component {
         }
     }
 
+    //Cai nay chi Random hoac la enemy speed hoac la nguoc lai (di huong nguoc lai)
     protected double getRandom() {
         return Math.random() > 0.5 ? ENEMY_SPEED : -ENEMY_SPEED;
     }

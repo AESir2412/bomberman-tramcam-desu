@@ -223,7 +223,7 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
-    /*@Spawns("dahl_e")
+    @Spawns("dahl_e")
     public Entity newDahl(SpawnData data) {
         return FXGL.entityBuilder(data)
                 .type(BBMType.DAHL_E)
@@ -235,7 +235,7 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
-    @Spawns("ovape_e")
+  /*  @Spawns("ovape_e")
     public Entity newOvape(SpawnData data) {
         return FXGL.entityBuilder(data)
                 .type(BBMType.OVAPE_E)
