@@ -211,6 +211,18 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
+    @Spawns("ghost_e")
+    public Entity newGhost(SpawnData data) {
+        return FXGL.entityBuilder(data)
+                .type(BBMType.GHOST_E)
+                .bbox(new HitBox(BoundingShape.circle(radius - 2)))
+                .atAnchored(new Point2D(0, 0), new Point2D(data.getX(), data.getY()))
+                .with(new Ghost())
+                .with(new CollidableComponent(true))
+                .zIndex(2)
+                .build();
+    }
+
     /*@Spawns("dahl_e")
     public Entity newDahl(SpawnData data) {
         return FXGL.entityBuilder(data)

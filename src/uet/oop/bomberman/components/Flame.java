@@ -49,6 +49,18 @@ public class Flame extends Component {
             getGameTimer().runOnceAfter(entity::removeFromWorld, Duration.seconds(1.5));
         });
 
+        onCollisionBegin(BBMType.FLAME, BBMType.GHOST_E, (f, b) -> {
+            double x = b.getX();
+            double y = b.getY();
+            b.getComponent(Ghost.class).enemyDie();
+            getGameTimer().runOnceAfter(() -> {
+                b.removeFromWorld();
+                set("numOfEnemy", getEnemies());
+            }, Duration.seconds(0.3));
+            Entity entity = spawn("enemyDie", new SpawnData(x, y));
+            getGameTimer().runOnceAfter(entity::removeFromWorld, Duration.seconds(1.5));
+        });
+
         onCollisionBegin(BBMType.FLAME, BBMType.ONEAL_E, (f, o) -> {
             double x = o.getX();
             double y = o.getY();

@@ -5,6 +5,7 @@ import uet.oop.bomberman.BBMType;
 import javafx.util.Duration;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
+import static uet.oop.bomberman.constants.Constants.SIZE_BLOCK;
 import static uet.oop.bomberman.constants.Constants.spriteSheetChosen;
 
 public class Balloom extends Enemy {
@@ -22,23 +23,18 @@ public class Balloom extends Enemy {
         onCollisionBegin(BBMType.BALLOOM_E, BBMType.BRICK,
                 (b, br) -> b.getComponent(Balloom.class).turn());
 
-        onCollisionBegin(BBMType.BALLOOM_E, BBMType.GRASS,
-                (b, gr) -> b.getComponent(Balloom.class).turn());
-
-        onCollisionBegin(BBMType.BALLOOM_E, BBMType.CORAL,
-                (b, co) -> b.getComponent(Balloom.class).turn());
 
     }
 
     @Override
     protected void setAnimationMove() {
-        animDie = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FLAME, SIZE_FLAME,
+        animDie = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FRAME, SIZE_FRAME,
                 Duration.seconds(ANIM_TIME), 22, 22);
-        animWalkRight = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FLAME, SIZE_FLAME,
+        animWalkRight = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FRAME, SIZE_FRAME,
                 Duration.seconds(ANIM_TIME), 19, 21);
-        animWalkLeft = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FLAME, SIZE_FLAME,
+        animWalkLeft = new AnimationChannel(image(spriteSheetChosen), 16, 48, 48,
                 Duration.seconds(ANIM_TIME), 16, 18);
-        animStop = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FLAME, SIZE_FLAME,
+        animStop = new AnimationChannel(image(spriteSheetChosen), 16, 48, 48,
                 Duration.seconds(1), 16, 22);
     }
 
@@ -46,7 +42,7 @@ public class Balloom extends Enemy {
     public void enemyDie() {
         super.enemyDie();
         int BALLOOM_SCORE = 100;
-        showScore(BALLOOM_SCORE);
+        showScoreWhenEnemyDie(BALLOOM_SCORE);
         inc("score", BALLOOM_SCORE);
     }
 }

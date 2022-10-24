@@ -80,13 +80,13 @@ public class Oneal extends Enemy {
 
     @Override
     protected void setAnimationMove() {
-        animDie = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FLAME, SIZE_FLAME,
+        animDie = new AnimationChannel(image(spriteSheetChosen), 16, 48, 48,
                 Duration.seconds(ANIM_TIME), 38, 38);
-        animWalkRight = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FLAME, SIZE_FLAME,
+        animWalkRight = new AnimationChannel(image(spriteSheetChosen), 16, 48, 48,
                 Duration.seconds(ANIM_TIME), 35, 37);
-        animWalkLeft = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FLAME, SIZE_FLAME,
+        animWalkLeft = new AnimationChannel(image(spriteSheetChosen), 16, 48, 48,
                 Duration.seconds(ANIM_TIME), 32, 34);
-        animStop = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_FLAME, SIZE_FLAME,
+        animStop = new AnimationChannel(image(spriteSheetChosen), 16, 48, 48,
                 Duration.seconds(1), 32, 36);
     }
 
@@ -95,7 +95,7 @@ public class Oneal extends Enemy {
         super.enemyDie();
 
         int ONEAL_SCORE = 200;
-        showScore(ONEAL_SCORE);
+        showScoreWhenEnemyDie(ONEAL_SCORE);
         inc("score", ONEAL_SCORE);
         die = true;
         astar.pause();
