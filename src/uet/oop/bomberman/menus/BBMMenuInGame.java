@@ -32,15 +32,12 @@ public class BBMMenuInGame extends FXGLMenu {
         iv1.setImage(new Image("assets/textures/background_demo_2.png"));
         iv1.setX(1080 / 2.0 - 520 / 2.0 - 85);
         iv1.setY(50);
-     /*   iv1.setEffect(new DropShadow(5, 3.5, 3.5, Color.WHITE));
-        iv1.setEffect(new Lighting());*/
         getContentRoot().getChildren().add(iv1);
 
         // UI title
         var title = getUIFactoryService().newText("PAUSE", Color.WHITE, 30);
         title.setStroke(Color.WHITE);
         title.setStrokeWidth(1.5);
-     /*   title.setEffect(new Bloom(0.6));*/
         centerTextBind(title, getAppWidth() / 2.0 + 8, 250);
 
 

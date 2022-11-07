@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
+//Tuong tu menu button, nma text chuyen mau khac ti
 public class SkinButton extends Parent {
     Text text;
 

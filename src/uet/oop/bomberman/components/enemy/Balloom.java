@@ -5,9 +5,9 @@ import uet.oop.bomberman.BBMType;
 import javafx.util.Duration;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
-import static uet.oop.bomberman.constants.Constants.SIZE_BLOCK;
 import static uet.oop.bomberman.constants.Constants.spriteSheetChosen;
 
+/**Basic enemy, cham tuong doi van toc sang random, di ngau nhien khi cham tuong*/
 public class Balloom extends Enemy {
 
     public Balloom() {

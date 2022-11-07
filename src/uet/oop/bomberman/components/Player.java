@@ -140,6 +140,8 @@ public class Player extends Component {
         entity.getViewComponent().addChild(texture);
     }
 
+
+    //Update player di chuyen
     @Override
     public void onUpdate(double tpf) {
         getEntity().setScaleUniform(0.95);

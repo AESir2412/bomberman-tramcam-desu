@@ -35,8 +35,6 @@ public class Flame extends Component {
 
         setCollisionBreak(BBMType.GRASS, "grass_break");
 
-        setCollisionBreak(BBMType.CORAL, "coral_break");
-
         onCollisionBegin(BBMType.FLAME, BBMType.BALLOOM_E, (f, b) -> {
             double x = b.getX();
             double y = b.getY();
@@ -72,43 +70,6 @@ public class Flame extends Component {
             Entity entity = spawn("enemyDie", new SpawnData(x, y));
             getGameTimer().runOnceAfter(entity::removeFromWorld, Duration.seconds(1.5));
         });
-
-        /*onCollisionBegin(BBMType.FLAME, BBMType.DORIA_E, (f, d) -> {
-            double x = d.getX();
-            double y = d.getY();
-            d.getComponent(Doria.class).enemyDie();
-            getGameTimer().runOnceAfter(() -> {
-                d.removeFromWorld();
-                set("numOfEnemy", getEnemies());
-            }, Duration.seconds(0.3));
-            Entity entity = spawn("enemyDie", new SpawnData(x, y));
-            getGameTimer().runOnceAfter(entity::removeFromWorld, Duration.seconds(1.5));
-        });
-
-        onCollisionBegin(BBMType.FLAME, BBMType.DAHL_E, (f, d) -> {
-            double x = d.getX();
-            double y = d.getY();
-            d.getComponent(Dahl.class).enemyDie();
-            getGameTimer().runOnceAfter(() -> {
-                d.removeFromWorld();
-                set("numOfEnemy", getEnemies());
-            }, Duration.seconds(0.3));
-            Entity entity = spawn("enemyDie", new SpawnData(x, y));
-            getGameTimer().runOnceAfter(entity::removeFromWorld, Duration.seconds(1.5));
-        });
-
-        onCollisionBegin(BBMType.FLAME, BBMType.OVAPE_E, (f, o) -> {
-            double x = o.getX();
-            double y = o.getY();
-            o.getComponent(Ovape.class).enemyDie();
-            getGameTimer().runOnceAfter(() -> {
-                o.removeFromWorld();
-                set("numOfEnemy", getEnemies());
-            }, Duration.seconds(0.3));
-
-            Entity entity = spawn("enemyDie", new SpawnData(x, y));
-            getGameTimer().runOnceAfter(entity::removeFromWorld, Duration.seconds(1.5));
-        });*/
 
         AnimationChannel animationFlame = new AnimationChannel(image(spriteSheetChosen), 16, SIZE_BLOCK, SIZE_BLOCK,
                 Duration.seconds(0.4), startF, endF);

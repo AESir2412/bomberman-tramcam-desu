@@ -103,13 +103,6 @@ public class Bomb extends Component {
             }
         }
 
-        List<Entity> temp2 = new ArrayList<>(getGameWorld().getEntitiesByType(BBMType.CORAL));
-        for (Entity value : temp2) {
-            if (value.getY() == entity.getY() - 1 && value.getX() >= entity.getX()) {
-                listRightBlock.add(value);
-            }
-        }
-
         List<Entity> temp3 = new ArrayList<>(getGameWorld().getEntitiesByType(BBMType.GRASS));
         for (Entity value : temp3) {
             if (value.getY() == entity.getY() - 1 && value.getX() >= entity.getX()) {
@@ -162,13 +155,6 @@ public class Bomb extends Component {
         List<Entity> temp1 = new ArrayList<>(getGameWorld().getEntitiesByType(BBMType.BRICK));
         for (Entity value : temp1) {
             if (value.getY() == entity.getY() - 1 && value.getX() < entity.getX()) {
-                listLeftBlock.add(value);
-            }
-        }
-
-        List<Entity> temp2 = new ArrayList<>(getGameWorld().getEntitiesByType(BBMType.CORAL));
-        for (Entity value : temp2) {
-            if (value.getY() == entity.getY() - 1 && value.getX() <entity.getX()) {
                 listLeftBlock.add(value);
             }
         }
@@ -229,12 +215,6 @@ public class Bomb extends Component {
             }
         }
 
-        List<Entity> temp2 = new ArrayList<>(getGameWorld().getEntitiesByType(BBMType.CORAL));
-        for (Entity value : temp2) {
-            if (value.getX() == entity.getX() - 1 && value.getY() > entity.getY()) {
-                listBottomBlock.add(value);
-            }
-        }
 
         List<Entity> temp3 = new ArrayList<>(getGameWorld().getEntitiesByType(BBMType.GRASS));
         for (Entity value : temp3) {
@@ -287,13 +267,6 @@ public class Bomb extends Component {
 
         List<Entity> temp1 = new ArrayList<>(getGameWorld().getEntitiesByType(BBMType.BRICK));
         for (Entity value : temp1) {
-            if (value.getX() == entity.getX() - 1 && value.getY() < entity.getY()) {
-                listAboveBlock.add(value);
-            }
-        }
-
-        List<Entity> temp2 = new ArrayList<>(getGameWorld().getEntitiesByType(BBMType.CORAL));
-        for (Entity value : temp2) {
             if (value.getX() == entity.getX() - 1 && value.getY() < entity.getY()) {
                 listAboveBlock.add(value);
             }

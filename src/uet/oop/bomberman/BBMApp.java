@@ -307,7 +307,6 @@ public class BBMApp extends GameApplication {
                     if (type == BBMType.BRICK
                             || type == BBMType.WALL
                             || type == BBMType.GRASS
-                            || type == BBMType.CORAL
                             || type == BBMType.AROUND_WALL) {
                         return CellState.NOT_WALKABLE;
                     } else {

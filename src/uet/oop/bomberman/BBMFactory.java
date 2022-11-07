@@ -75,7 +75,7 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
-    //Spawn bomb
+    //Spawn Bomb
 
     @Spawns("bomb")
     public Entity newBomb(SpawnData data) {
@@ -100,7 +100,7 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
-    //spawn flame
+    //Spawn Flame (every kind)
 
     @Spawns("centerFlame")
     public Entity newCenterFlame(SpawnData data) {
@@ -197,7 +197,7 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
-    //Spawn enemy
+    //Spawn Enemies (every kinds)
 
     @Spawns("balloom_e")
     public Entity newBalloom(SpawnData data) {
@@ -235,18 +235,6 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
-  /*  @Spawns("ovape_e")
-    public Entity newOvape(SpawnData data) {
-        return FXGL.entityBuilder(data)
-                .type(BBMType.OVAPE_E)
-                .bbox(new HitBox(BoundingShape.circle(radius - 2)))
-                .atAnchored(new Point2D(0, 0), new Point2D(data.getX(), data.getY()))
-                .with(new Ovape())
-                .with(new CollidableComponent(true))
-                .zIndex(2)
-                .build();
-    }*/
-
     @Spawns("oneal_e")
     public Entity newOneal(SpawnData data) {
         return FXGL.entityBuilder(data)
@@ -261,19 +249,6 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
-    /*@Spawns("doria_e")
-    public Entity newDoria(SpawnData data) {
-        return FXGL.entityBuilder(data)
-                .type(BBMType.DORIA_E)
-                .bbox(new HitBox(BoundingShape.circle(radius - 2)))
-                .with(new CollidableComponent(true))
-                .atAnchored(new Point2D(radius, radius), new Point2D(radius, radius))
-                .with(new CellMoveComponent(SIZE_BLOCK, SIZE_BLOCK, ENEMY_SPEED + 20))
-                .with(new AStarMoveComponent(new LazyValue<>(() -> geto("_grid"))))
-                .with(new Doria())
-                .zIndex(2)
-                .build();
-    }*/
 
     @Spawns("enemyDie")
     public Entity newEnemyDie(SpawnData data) {
@@ -285,7 +260,7 @@ public class BBMFactory implements EntityFactory {
                 .build();
     }
 
-    //BLOCKS
+    //Spawn Blocks and shit
 
     @Spawns("wall")
     public Entity newWall(SpawnData data) {

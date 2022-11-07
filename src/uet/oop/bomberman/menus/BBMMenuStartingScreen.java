@@ -34,29 +34,8 @@ public class BBMMenuStartingScreen extends FXGLMenu {
         bg.setImage(new Image("assets/textures/titleScreen.png"));
         bg.setX(0);
         bg.setY(0);
-      /*  var background = new Rectangle(FXGL.getAppWidth(), getAppHeight(), Color.BLACK);*/
         getContentRoot().getChildren().add(bg);
     }
-
-    /*private void displayTitle() {
-        // UI game title
-        var title = getUIFactoryService().newText(getSettings().getTitle(), Color.WHITE, 100);
-        centerTextBind(title, getAppWidth() / 2.0, 250);
-
-        // UI game version
-        var version = getUIFactoryService().newText(getSettings().getVersion(), Color.WHITE, 40);
-        centerTextBind(version, getAppWidth() / 2.0, 280);
-
-        var dropShadow = new DropShadow();
-        dropShadow.setColor(Color.DARKBLUE);
-        dropShadow.setOffsetY(10);
-        dropShadow.setOffsetX(10);
-
-        title.setEffect(dropShadow);
-        version.setEffect(dropShadow);
-
-        getContentRoot().getChildren().addAll(title, version);
-    }*/
 
     private void displayOptionsBox() {
         var buttonTextSize = 40;
